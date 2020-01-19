@@ -11,10 +11,10 @@ export ZSH="/Users/jpeuramaki/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 alias vi="nvim"
 alias vim="nvim"
-
+alias dot="cd ~/dotfiles"
 chpwd() ls
 
- Set list of themes to pick from when loading at random
+# Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
