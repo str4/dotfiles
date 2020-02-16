@@ -12,6 +12,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 alias vi="nvim"
 alias vim="nvim"
 alias dot="cd ~/dotfiles"
+alias tmux="tmux -u"
 chpwd() ls
 
 # Set list of themes to pick from when loading at random
@@ -103,3 +104,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

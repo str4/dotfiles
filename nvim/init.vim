@@ -1,15 +1,8 @@
 " plugins
-
 call plug#begin()
-
-
-
-" Plug 'jiangmiao/auto-pairs'
-" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-" Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install',
@@ -17,24 +10,9 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
-" Plug 'othree/yajs'
-"Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'joshdick/onedark.vim'
-Plug 'tomasiser/vim-code-dark'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
-Plug 'larsbs/vimterial_dark'
-"" fuzzy finder
-
-"Plug 'junegunn/fzf.vim'
-
-"" language
-"Plug 'Shougo/deoplete.nvim'
-
-"" color
-
 
 call plug#end()
 
@@ -192,6 +170,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 let mapleader=" "
+nmap <Leader>u :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 nmap <leader>e :NERDTreeFind<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>o :Buffers<CR>
@@ -212,8 +193,7 @@ noremap <leader>9 9gt
 
 nnoremap ö %
 nnoremap ä /
-nnoremap H 0 
-nnoremap L $
+
     "Make ctrl-l clear highlights
     nnoremap <c-l> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
