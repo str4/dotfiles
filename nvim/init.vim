@@ -4,12 +4,13 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install',
 "  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'html'] }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'HerringtonDarkholme/yats.vim'
 
 Plug 'kyoz/purify', { 'rtp': 'vim' }
@@ -190,6 +191,10 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
+
+" Move selected lines up and down in visual mode
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
 nnoremap ö %
 nnoremap ä /
