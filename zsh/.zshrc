@@ -11,25 +11,35 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jpeuramaki/.oh-my-zsh"
 
+# nnn settings
+export NNN_BMS="d:~/Documents;D:~/Downloads;n:~/node;"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-alias vi="nvim"
-alias vim="nvim"
-alias dot="cd ~/dotfiles"
-alias tmux="tmux -u"
-alias python="python3"
-alias pip="pip3"
-alias top="top -F -R -o cpu"
+alias zzz='vim ~/dotfiles/zsh/.zshrc'
+alias ttt='vim ~/dotfiles/tmux/.tmux.conf'
+alias aaa='vim ~/dotfiles/alacritty/alacritty.yml'
+alias po='exa --long --grid'
+alias vi='nvim'
+alias vim='nvim'
+alias dot='cd ~/dotfiles'
+alias tmux='tmux -u'
+alias python='python3'
+alias pip='pip3'
+alias cpu='top -F -R -o cpu'
+alias mem='top -F -R -o MEM'
+alias ff="nnn"
+alias zs="source ~/dotfiles/zsh/.zshrc"
 
 # Inlude hidden files in tab-complete
 _comp_options+=(globdots)
 
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
