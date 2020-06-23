@@ -33,6 +33,7 @@ alias cpu='top -F -R -o cpu'
 alias mem='top -F -R -o MEM'
 alias ff="nnn"
 alias zs="source ~/dotfiles/zsh/.zshrc"
+alias we='curl wttr.in/"Tampere"'
 
 # Inlude hidden files in tab-complete
 _comp_options+=(globdots)
